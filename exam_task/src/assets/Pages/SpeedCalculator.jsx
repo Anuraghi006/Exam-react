@@ -8,12 +8,13 @@ export default function SpeedCalculator() {
     const [distance,setDistance]=useState(0)
     const [time,setTime]=useState(0)
     const [speed,setSpeed]=useState(0)
-    const calculateSpeed=()=>{
-        const t=parseFloat(distance)
-        const d=parseFloat(time)
-         setSpeed(t > 0 ? d / t : 0)
-        
-    }
+
+       const calculateSpeed = () => {
+  const d = parseFloat(distance)
+  const t = parseFloat(time)
+  setSpeed(t > 0 ? d / t : 0)
+}
+
   return (
     <div>
       <Form onSubmit={calculateSpeed}>
@@ -25,7 +26,7 @@ export default function SpeedCalculator() {
           <Form.Control onChange={(e)=>setTime(e.target.value)} placeholder="Enter Time" />
         </Col>
         <Col>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type='submit'>
         Calculate
       </Button>
         </Col>
