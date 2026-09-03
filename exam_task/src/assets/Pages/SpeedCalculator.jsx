@@ -16,7 +16,7 @@ export default function SpeedCalculator() {
     }
   return (
     <div>
-      <Form >
+      <Form onSubmit={calculateSpeed}>
       <Row>
         <Col>
           <Form.Control onChange={(e)=>setDistance(e.target.value)} placeholder="Enter Distance " />
@@ -25,7 +25,7 @@ export default function SpeedCalculator() {
           <Form.Control onChange={(e)=>setTime(e.target.value)} placeholder="Enter Time" />
         </Col>
         <Col>
-          <Button variant="primary" onClick={calculateSpeed}>
+          <Button variant="primary" type="submit">
         Calculate
       </Button>
         </Col>
