@@ -9,15 +9,15 @@ export default function SpeedCalculator() {
     const [time,setTime]=useState(0)
     const [speed,setSpeed]=useState(0)
     const calculateSpeed=()=>{
-        // const t=parseFloat(distance)
-        // const d=parseFloat(time)
-        // if(t>0){
-        //   setSpeed(speed=d/t)
-        // }
-        // else{
-        //   setSpeed(0)
-        // }
-        setSpeed(distance/time)
+        const t=parseFloat(distance)
+        const d=parseFloat(time)
+        if(t>0){
+          setSpeed(speed=d/t)
+        }
+        else{
+          setSpeed(0)
+        }
+        
     }
   return (
     <div>
